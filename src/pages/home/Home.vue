@@ -1,13 +1,20 @@
 <template>
   <div>
+    <my-home-header></my-home-header>
+    <home-swiper></home-swiper>
     <div>{{ msg }}</div>
-    <router-link to="/list">列表页</router-link>
   </div>
 </template>
 
 <script>
+import HomeHeader from './components/Header'
+import HomeSwiper from './components/Swiper'
 export default {
   name: 'Home',
+  components: {
+    MyHomeHeader: HomeHeader,
+    HomeSwiper
+  },
   data () {
     return {
       msg: 'home'
